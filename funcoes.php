@@ -50,10 +50,12 @@ function numerosPrimos ($inicial, $final){
 
 function definirX ($linha,$coluna){
 	if($linha == $coluna){
-		echo 'x';
-	}else{
-		echo 0;
+		echo 'X';
+	}elseif($linha == 10 - $coluna){
+		echo 'X';
 	}
+	else
+	echo 0;
 }
 
 ?>

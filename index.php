@@ -43,7 +43,7 @@ OOOXOOOXOOO  8
 OOXOOOOOXOO  9
 OXOOOOOOOXO  10
 XOOOOOOOOXO  11
-             I
+             
 
 
 -->
@@ -52,16 +52,15 @@ XOOOOOOOOXO  11
 
 <?php
 
-	for ($j=0; $j <= 10 ; $j++) { //laco do linha
-		for ($i=0; $i <= 10 ; $i++) { //laco da coluna
-		definirX($j, $i);
+	for ($x=0; $x <= 10 ; $x++) { //laco do linha	
+			for ($y=0; $y <= 10 ; $y++) { //laco da coluna
+			definirX($x, $y);
 	}
-	echo '<br>';
-}
+	echo '<br>';		 
+}	
 
 
 ?>
-
 
 </body>
 </html>
