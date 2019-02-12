@@ -21,12 +21,12 @@ $dadosPaciente[0]['nome'] = "Jose";
 $dadosPaciente[0]['cpf'] = "3453453453";
 $dadosPaciente[1]['nome'] = "marieta";
 $dadosPaciente[1]['cpf'] = "65765756756";
-$dadosPaciente[12]['nome'] = "renato gonçalves";
-$dadosPaciente[12]['cpf'] = "65765756756";
+$dadosPaciente[2]['nome'] = "renato gonçalves";
+$dadosPaciente[2]['cpf'] = "65765756756";
 $dadosPaciente[3]['nome'] = "paulo";
 $dadosPaciente[3]['cpf'] = "65765756756";
-$dadosPaciente[40]['nome'] = "leidiane";
-$dadosPaciente[40]['cpf'] = "65765756756";
+$dadosPaciente[4]['nome'] = "leidiane";
+$dadosPaciente[4]['cpf'] = "65765756756";
 //print_r($dadosPaciente);
 // for($i = 0; $i < count($dadosPaciente); $i++){
 	
@@ -41,23 +41,9 @@ foreach( $dadosPaciente as $key => $valor){
 	echo "<br>";
 }
 
-
-
-
-
-
-
-
-
 ?>
 
-
-
-
-
-
-
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 	<title>pagina inicial</title>
@@ -70,8 +56,7 @@ foreach( $dadosPaciente as $key => $valor){
 <input type="submit" value="enviar"></input>
 </form>
 <?php echo media($valorDoFormulario);?>
-
-
+ -->
 <!-- exercico proxima aula
 
 1234567891011 J
@@ -95,8 +80,8 @@ XOOOOOOOOXO  11
 
 <?php
 
-	for ($x=0; $x <= 10 ; $x++) { //laco do linha	
-			for ($y=0; $y <= 10 ; $y++) { //laco da coluna
+	for ($x=0; $x <= 12 ; $x++) { //laco do linha	
+			for ($y=0; $y <= 12 ; $y++) { //laco da coluna
 			definirX($x, $y);
 	}
 	echo '<br>';		 

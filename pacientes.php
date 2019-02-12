@@ -32,6 +32,29 @@ include_once "funcoes.php";
 
 	</tr>
 
+	<tr>
+		<td>Joao Lucas</td>
+		<td>25814736987</td>
+		<td>joao@lucas.com</td>
+		<td>novo</td>
+
+	</tr>
+
+	<tr>
+		<td>jose</td>
+		<td>77894521398</td>
+		<td>jose@maria.com</td>
+		<td>novo</td>
+
+	</tr>
+
+	<tr>
+		<td>marieta</td>
+		<td>25963478218</td>
+		<td>marieta@maria.com</td>
+		<td>novo</td>
+
+	</tr>
 	
 </table>
 
