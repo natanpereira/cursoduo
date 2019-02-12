@@ -6,7 +6,6 @@ function somar($a,$b){
 
  function media($nota ){
 
-
  	$nota *= somar(10,001);
 
  	if($nota > 5){
