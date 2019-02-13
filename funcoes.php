@@ -57,4 +57,38 @@ function definirX ($linha,$coluna){
 	echo 0;
 }
 
+
+function conexao($host,$usuario,$senha,$banco){
+
+
+	mysql_connect($host,$usuario,$senha) or die("nao consegui conectar com o banco de dados");
+
+	mysql_select_db($banco) or die("banco de dados nao encontrado");
+
+
+}
+
+function getAssoc($data){
+	$retorno = [];
+	while($a = mysql_fetch_assoc($data)){
+
+		$retorno[] = $a;
+	}
+	return $retorno;	
+}
+
+
+function listaPacientes(){
+
+	$sql = "SELECT * FROM pacientes";
+	$data = mysql_query($sql);
+
+	$retorno = getAssoc($data);
+	
+	return $retorno;
+
+
+}
+
+
 ?>
