@@ -87,8 +87,18 @@ function listaPacientes(){
 	
 	return $retorno;
 
-
 }
 
+function cadastrarPacientes($nome,$cpf,$email){
+	$string_sql = "INSERT INTO pacientes (id,nome,cpf,email) VALUES (null,'$nome','$cpf','$email')";
+
+    mysql_query($string_sql);
+}
+
+function editarCadastro($id,$nome,$cpf,$email){
+	$altPaciente = "UPDATE pacientes SET (nome, cpf,email) WHERE id = '$id'";
+
+	mysql_query($altPaciente);
+}
 
 ?>
