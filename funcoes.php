@@ -4,6 +4,7 @@ function somar($a,$b){
 	return $resultado;
 }
 
+
  function media($nota ){
 
  	$nota *= somar(10,001);
@@ -21,6 +22,7 @@ function somar($a,$b){
  	return $nota;
  }
 
+
 function definirPrimo($numero){
 	
 	$contador = 0;
@@ -37,6 +39,7 @@ function definirPrimo($numero){
 	}	
 	return "";
 }
+
 
 function numerosPrimos ($inicial, $final){
 
@@ -60,12 +63,9 @@ function definirX ($linha,$coluna){
 
 function conexao($host,$usuario,$senha,$banco){
 
-
 	mysql_connect($host,$usuario,$senha) or die("nao consegui conectar com o banco de dados");
 
 	mysql_select_db($banco) or die("banco de dados nao encontrado");
-
-
 }
 
 function getAssoc($data){
@@ -79,15 +79,15 @@ function getAssoc($data){
 
 
 function listaPacientes(){
-
-	$sql = "SELECT * FROM pacientes";
-	$data = mysql_query($sql);
+		
+		$sql = "SELECT * FROM pacientes";
+		$data = mysql_query($sql);
 
 	$retorno = getAssoc($data);
-	
-	return $retorno;
 
+	return $retorno;
 }
+
 
 function cadastrarPacientes($nome,$cpf,$email){
 	$string_sql = "INSERT INTO pacientes (id,nome,cpf,email) VALUES (null,'$nome','$cpf','$email')";
@@ -95,10 +95,28 @@ function cadastrarPacientes($nome,$cpf,$email){
     mysql_query($string_sql);
 }
 
-function editarCadastro($id,$nome,$cpf,$email){
-	$altPaciente = "UPDATE pacientes SET (nome, cpf,email) WHERE id = '$id'";
+
+function editarCadastro($mostra,$nome_edit,$cpf_edit,$email_edit){
+	$altPaciente = "UPDATE pacientes SET nome='$nome_edit', cpf='$cpf_edit',email='$email_edit' WHERE id = '$mostra'";
 
 	mysql_query($altPaciente);
+}
+
+
+function deletaPacientes($id_del){
+	$del = "DELETE  FROM pacientes WHERE id='$id_del'";
+	mysql_query($del);
+
+}
+
+
+function mostraPacientes($id_mostra){
+		$sql_mostra = "SELECT * FROM pacientes WHERE id='$id_mostra'";
+		$data_mostra = mysql_query($sql_mostra);
+
+		$retorno_mostra = getAssoc($data_mostra);
+	
+	return $retorno_mostra;
 }
 
 ?>

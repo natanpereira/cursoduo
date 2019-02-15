@@ -24,6 +24,7 @@ $pacientes = listaPacientes();
 </head>
 <body>
 
+
 <div class="container">
 
 <a href="novo.php" class="btn btn-primary">Novo paciente</a>
@@ -42,8 +43,8 @@ $pacientes = listaPacientes();
 		<td><?php echo $valor['cpf']?></td>
 		<td><?php echo $valor['email']?></td>
 		<td>
-			<a href="editar.php?id=<?=$valor['id']?>">EDITAR</a>
-			<a href=""><button class="btn btn-success">EXCLUIR</button></a>		
+			<a href="editar.php?id=<?=$valor['id']?>"><button class="btn btn-success">EDITAR</button></a>
+			<a href="pacientes.php?id=<?=$valor['id']?>"<?php $id_del = $_GET['id']; deletaPacientes($id_del);?>><button class="btn btn-success" onclick="Refresh()">EXCLUIR</button></a>	
 		</td>
 
 	</tr>
