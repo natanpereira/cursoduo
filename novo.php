@@ -20,8 +20,11 @@ include_once "configuracao.php";
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+
+
 </head>
-<body>
+<body background="fundo_linhas.jpg">
+<h1 align="center">Cadastrar Novo Paciente</h1>
 <div class="container">
 	<form method ="post" action="novo.php">
 		<div class="form-group">
@@ -44,8 +47,8 @@ include_once "configuracao.php";
 			
 		</div>
 	</form> 
-	<a href="pacientes.php"><button type="submit" class="btn btn-success">Voltar</button></a>
+	
 </div>
-
+<a href="pacientes.php"><button type="submit" class="btn btn-success">Voltar</button></a>
 </body>
 </html>

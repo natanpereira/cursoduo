@@ -29,7 +29,8 @@ $mostraPaciente = mostraPacientes($id_mostra);
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
 
 </head>
-<body>
+<body background="fundo_linhas.jpg"> 
+<h1 align="center" >Editar Cadastro Paciente</h1>
 <div class="container">
 
 <?php foreach($mostraPaciente as $valor): ?>
@@ -55,7 +56,7 @@ $mostraPaciente = mostraPacientes($id_mostra);
 		</div>
 		
 		<div class="form-group">
-			<button type="submit">Alterar</button>	
+			<button type="submit" class="btn btn-success">Alterar</button>	
 			
 		<?php endforeach?>	
 		</div>
