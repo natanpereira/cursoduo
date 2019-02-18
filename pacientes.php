@@ -2,6 +2,8 @@
 include_once "funcoes.php";
 include_once "configuracao.php";
 
+
+
 $pacientes = listaPacientes();
 
 ?>
@@ -10,8 +12,13 @@ $pacientes = listaPacientes();
 <html>
 <head>	
 	<title>Pacientes</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="mdl/material.min.css">
+	<script src="mdl/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	</head>
 
+
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
@@ -27,7 +34,7 @@ $pacientes = listaPacientes();
 
 <div class="container">
 <dl>
-<a href="novo.php" class="btn btn-primary">Novo paciente</a>
+<a href="novo.php" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Novo paciente</a>
 </dl>
 <table class="table table-striped table-bordered " id="pacientes">
 
@@ -43,9 +50,9 @@ $pacientes = listaPacientes();
 		<td><?php echo $valor['nome']?></td>
 		<td><?php echo $valor['cpf']?></td>
 		<td><?php echo $valor['email']?></td>
-		<td>
-			<a href="editar.php?id=<?=$valor['id']?>"><button class="btn btn-success">EDITAR</button></a>
-			<a href="pacientes.php?id=<?=$valor['id']?>"<?php $id_del = $_GET['id']; deletaPacientes($id_del);?>><button class="btn btn-success" onclick="Refresh()">EXCLUIR</button></a>	
+		<td align="right">
+			<a href="editar.php?id=<?=$valor['id']?>"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">EDITAR</button></a>
+			<a href="pacientes.php?id=<?=$valor['id']?>"<?php $id_del = $_GET['id']; deletaPacientes($id_del);?>><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">EXCLUIR</button></a>	
 		</td>
 
 	</tr>

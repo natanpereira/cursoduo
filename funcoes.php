@@ -119,4 +119,10 @@ function mostraPacientes($id_mostra){
 	return $retorno_mostra;
 }
 
+function cadastrarUsuario($login, $senha){
+	$string_sql = "INSERT INTO usuario (id_usuario,login,senha_usuario) VALUES (null,'$login','$senha')";
+
+    mysql_query($string_sql);
+}
+
 ?>

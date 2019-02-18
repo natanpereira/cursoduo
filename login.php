@@ -1,9 +1,17 @@
 <?php 
+header('Content-type: text/html; charset=utf-8');
+ini_set("display_errors",1);
+
+include_once "funcoes.php";
+include_once "configuracao.php";
+
+session_start();
+  if($_POST){
   $login = $_POST['login'];
   $entrar = $_POST['entrar'];
-  $senha = md5($_POST['senha']);
-  $connect = mysql_connect('localhost','root','q1w2e3r4');
-  $db = mysql_select_db('cursoduo');
+  $senha = $_POST['senha'];
+}
+
     if (isset($entrar)) {
              
       $verifica = mysql_query("SELECT * FROM usuario WHERE login = '$login' AND senha_usuario = '$senha'") or die("erro ao selecionar");
@@ -11,6 +19,7 @@
           echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.php';</script>";
           die();
         }else{
+           $_SESSION[‘logado’] = 1;
           setcookie("login",$login);
           header("Location:pacientes.php");
         }
@@ -26,11 +35,24 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
 </head>
 <body background="fundo_linhas.jpg">
+
 <div class="container">
 <form method="POST" action="login.php">
-<label>Login:</label><input type="text" name="login" id="login"><br>
-<label>Senha:</label><input type="password" name="senha" id="senha"><br>
-<input type="submit" value="entrar" id="entrar" name="entrar"><br>
+      <div class="form-group">
+        <label>Login</label>
+        <input type="text" name="login" id="login" class="form-control"><br>
+      </div>
+
+      <div class="form-group">
+        <label>Senha</label>
+        <input type="password" name="senha" id="senha" class="form-control"><br>
+      </div>
+
+        <div class="form-group">
+          <input type="submit" value="entrar" id="entrar" name="entrar" ><br>
+      </div>
+
+<a href="cadastro.php">Cadastre-se</a>
 </div>
 </form>
 </body>

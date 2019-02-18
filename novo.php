@@ -16,11 +16,17 @@ include_once "configuracao.php";
 <html>
 <head>
 	<title>Novo Paciente</title>
+
+	<link rel="stylesheet" href="mdl/material.min.css">
+	<script src="mdl/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
-
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+	<link href="css/style.css" rel="stylesheet">
 
 </head>
 <body background="fundo_linhas.jpg">
@@ -43,12 +49,12 @@ include_once "configuracao.php";
 		</div>
 		
 		<div class="form-group">
-			<button type="submit" class="btn btn-success">Enviar</button>	
+			<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Enviar</button>	
 			
 		</div>
 	</form> 
 	
 </div>
-<a href="pacientes.php"><button type="submit" class="btn btn-success">Voltar</button></a>
+<a href="pacientes.php"><button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Voltar</button></a>
 </body>
 </html>
