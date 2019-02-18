@@ -6,6 +6,12 @@ include_once "configuracao.php";
 
 $pacientes = listaPacientes();
 
+if (isset($_GET['id'])){
+	$id_del = $_GET['id'];
+	deletaPacientes($id_del);
+	
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +58,10 @@ $pacientes = listaPacientes();
 		<td><?php echo $valor['email']?></td>
 		<td align="right">
 			<a href="editar.php?id=<?=$valor['id']?>"><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">EDITAR</button></a>
-			<a href="pacientes.php?id=<?=$valor['id']?>"<?php $id_del = $_GET['id']; deletaPacientes($id_del);?>><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">EXCLUIR</button></a>	
+			
+			<a href="pacientes.php?id=<?=$valor['id']?>"<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">	EXCLUIR	</button>    </a>	
+
+
 		</td>
 
 	</tr>

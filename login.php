@@ -29,10 +29,12 @@ session_start();
 <html>
 <head>
 <title> Login de Usuário </title>
+<h2 align="center">LOGIN</h2>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+  <link rel="shortcut icon" href="favicon.ico" type="image/ico" />
 </head>
 <body background="fundo_linhas.jpg">
 

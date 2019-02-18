@@ -71,7 +71,6 @@ function conexao($host,$usuario,$senha,$banco){
 function getAssoc($data){
 	$retorno = [];
 	while($a = mysql_fetch_assoc($data)){
-
 		$retorno[] = $a;
 	}
 	return $retorno;	
@@ -82,23 +81,19 @@ function listaPacientes(){
 		
 		$sql = "SELECT * FROM pacientes";
 		$data = mysql_query($sql);
-
-	$retorno = getAssoc($data);
-
+		$retorno = getAssoc($data);
 	return $retorno;
 }
 
 
 function cadastrarPacientes($nome,$cpf,$email){
 	$string_sql = "INSERT INTO pacientes (id,nome,cpf,email) VALUES (null,'$nome','$cpf','$email')";
-
     mysql_query($string_sql);
 }
 
 
 function editarCadastro($mostra,$nome_edit,$cpf_edit,$email_edit){
 	$altPaciente = "UPDATE pacientes SET nome='$nome_edit', cpf='$cpf_edit',email='$email_edit' WHERE id = '$mostra'";
-
 	mysql_query($altPaciente);
 }
 
@@ -106,6 +101,7 @@ function editarCadastro($mostra,$nome_edit,$cpf_edit,$email_edit){
 function deletaPacientes($id_del){
 	$del = "DELETE  FROM pacientes WHERE id='$id_del'";
 	mysql_query($del);
+	header("Location:pacientes.php");
 
 }
 
@@ -113,16 +109,17 @@ function deletaPacientes($id_del){
 function mostraPacientes($id_mostra){
 		$sql_mostra = "SELECT * FROM pacientes WHERE id='$id_mostra'";
 		$data_mostra = mysql_query($sql_mostra);
-
 		$retorno_mostra = getAssoc($data_mostra);
 	
 	return $retorno_mostra;
 }
 
+
 function cadastrarUsuario($login, $senha){
 	$string_sql = "INSERT INTO usuario (id_usuario,login,senha_usuario) VALUES (null,'$login','$senha')";
-
     mysql_query($string_sql);
 }
+
+
 
 ?>
